@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .faq-item { border-bottom: 1px solid var(--color-gray-light); }
+    .faq-question {
+      display: flex; justify-content: space-between; align-items: center;
+      padding: var(--spacing-lg) 0; cursor: pointer; font-weight: 600;
+    }
+    .faq-question:hover { color: var(--color-primary-gold); }
+    .faq-answer {
+      max-height: 0; overflow: hidden; transition: max-height 0.3s ease;
+      color: var(--color-gray-dark);
+    }
+    .faq-item.active .faq-answer { max-height: 200px; padding-bottom: var(--spacing-lg); }
+    .faq-item.active .faq-icon { transform: rotate(180deg); }
+    .faq-icon { transition: transform 0.3s ease; color: var(--color-primary-gold); }
+    .faq-category { margin-bottom: var(--spacing-xl); }
+    .faq-category-title {
+      color: var(--color-primary-gold); font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; margin-bottom: var(--spacing-md);
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../publicas/01-inicio.html" class="navbar-logo">Stylo <span>Barber</span></a>
+    <ul class="navbar-links">
+      <li><a href="../publicas/01-inicio.html" class="navbar-link">Inicio</a></li>
+      <li><a href="../publicas/02-servicios.html" class="navbar-link">Servicios</a></li>
+      <li><a href="#" class="navbar-link active">Soporte</a></li>
+      <li><a href="../publicas/06-login.html" class="btn btn-primary btn-sm">Iniciar Sesion</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title">Preguntas Frecuentes</h1>
+      <p class="text-center text-small" style="margin-bottom: var(--spacing-2xl);">Encuentra respuestas a las dudas mas comunes</p>
+
+      <div class="faq-category">
+        <p class="faq-category-title">Citas y Reservaciones</p>
+        <div class="card">
+          <div class="faq-item active">
+            <div class="faq-question">
+              <span>Como puedo agendar una cita?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Puedes agendar tu cita desde nuestra app o pagina web. Selecciona el servicio, barbero y horario de tu preferencia. Recibiras una confirmacion por correo y SMS.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Puedo cancelar o reprogramar mi cita?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Si, puedes cancelar o reprogramar hasta 24 horas antes de tu cita sin costo. Cancelaciones tardias pueden generar un cargo del 50%.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Que pasa si llego tarde a mi cita?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Tienes 10 minutos de tolerancia. Despues de ese tiempo, tu cita podria ser cancelada automaticamente.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <p class="faq-category-title">Pagos y Facturacion</p>
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Que metodos de pago aceptan?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Aceptamos efectivo, tarjetas de credito/debito, transferencias y pagos a traves de la app.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Puedo obtener factura?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Si, solicitala al momento de pagar o desde tu perfil dentro de las 72 horas posteriores a tu visita.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-category">
+        <p class="faq-category-title">Productos</p>
+        <div class="card">
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Hacen envios a domicilio?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Si, enviamos a todo Mexico. Pedidos mayores a $500 tienen envio gratis.</div>
+          </div>
+          <div class="faq-item">
+            <div class="faq-question">
+              <span>Cual es la politica de devolucion?</span>
+              <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+            </div>
+            <div class="faq-answer">Tienes 15 dias para devolver productos sin abrir. Contactanos para iniciar el proceso.</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card text-center" style="background: var(--color-gray-light); margin-top: var(--spacing-2xl);">
+        <h3>No encontraste lo que buscabas?</h3>
+        <p class="text-small" style="margin-bottom: var(--spacing-md);">Contacta a nuestro equipo de soporte</p>
+        <a href="04-nuevo-ticket.html" class="btn btn-primary">Crear Ticket</a>
+        <a href="05-chat.html" class="btn btn-secondary">Chat en Vivo</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--color-primary-dark); color: rgba(255,255,255,0.7); padding: var(--spacing-xl) 0;">
+    <div class="container text-center">
+      <p class="navbar-logo" style="margin-bottom: var(--spacing-md);">Stylo <span>Barber</span></p>
+      <p class="text-small" style="color: rgba(255,255,255,0.5);">2024 Stylo Barber Connect. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.addEventListener('click', () => q.parentElement.classList.toggle('active'));
+    });
+  </script>
+</body>
+</html>

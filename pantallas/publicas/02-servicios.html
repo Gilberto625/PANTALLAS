@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="01-inicio.html" class="navbar-logo">Stylo <span>Barber</span></a>
+    <ul class="navbar-links">
+      <li><a href="01-inicio.html" class="navbar-link">Inicio</a></li>
+      <li><a href="#" class="navbar-link active">Servicios</a></li>
+      <li><a href="04-productos.html" class="navbar-link">Productos</a></li>
+      <li><a href="06-login.html" class="btn btn-secondary btn-sm">Iniciar Sesion</a></li>
+    </ul>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <h1>Nuestros Servicios</h1>
+      <p>Descubre todos los servicios que tenemos para ti</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- Filtros -->
+      <div class="card mb-lg">
+        <div class="flex-between flex-gap" style="flex-wrap: wrap;">
+          <div class="tabs" style="border: none; margin: 0;">
+            <span class="tab active">Todos</span>
+            <span class="tab">Cortes</span>
+            <span class="tab">Barba</span>
+            <span class="tab">Tratamientos</span>
+          </div>
+          <select class="form-select" style="width: auto; min-width: 200px;">
+            <option>Ordenar por: Popularidad</option>
+            <option>Precio: Menor a Mayor</option>
+            <option>Precio: Mayor a Menor</option>
+            <option>Duracion</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="card-image"></div>
+          <span class="badge badge-gold mb-sm">Popular</span>
+          <h3>Corte Clasico</h3>
+          <p class="text-small mb-sm">Corte tradicional con tijera y maquina. Incluye lavado y peinado.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$150 MXN</p>
+              <p class="text-caption">30 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"></div>
+          <h3>Corte Degradado</h3>
+          <p class="text-small mb-sm">Fade profesional con transiciones perfectas.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$180 MXN</p>
+              <p class="text-caption">35 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"></div>
+          <span class="badge badge-gold mb-sm">Recomendado</span>
+          <h3>Corte + Barba</h3>
+          <p class="text-small mb-sm">Combo completo: corte de cabello y perfilado de barba.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$250 MXN</p>
+              <p class="text-caption">45 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"></div>
+          <h3>Afeitado Clasico</h3>
+          <p class="text-small mb-sm">Afeitado con navaja, toallas calientes y balsamo.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$120 MXN</p>
+              <p class="text-caption">20 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"></div>
+          <h3>Perfilado de Barba</h3>
+          <p class="text-small mb-sm">Definicion y perfilado profesional de barba.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$100 MXN</p>
+              <p class="text-caption">15 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-image"></div>
+          <span class="badge badge-info mb-sm">Premium</span>
+          <h3>Tratamiento Capilar</h3>
+          <p class="text-small mb-sm">Hidratacion profunda y masaje relajante.</p>
+          <div class="flex-between">
+            <div>
+              <p class="text-gold" style="font-weight: 700; font-size: 20px;">$350 MXN</p>
+              <p class="text-caption">40 minutos</p>
+            </div>
+            <a href="03-detalle-servicio.html" class="btn btn-primary btn-sm">Ver detalle</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <nav class="navbar-mobile">
+    <a href="01-inicio.html" class="navbar-mobile-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+      Inicio
+    </a>
+    <a href="#" class="navbar-mobile-item active">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><path d="M6 9v12"/><path d="M13 6l-3 9 7 4"/></svg>
+      Servicios
+    </a>
+    <a href="04-productos.html" class="navbar-mobile-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>
+      Tienda
+    </a>
+    <a href="06-login.html" class="navbar-mobile-item">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      Cuenta
+    </a>
+  </nav>
+</body>
+</html>

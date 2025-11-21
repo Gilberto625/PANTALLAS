@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <p class="text-small" style="color: var(--color-primary-gold); margin-bottom: var(--spacing-lg);">Panel Administrador</p>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-empleados-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Empleados</a></li>
+        <li class="sidebar-item"><a href="05-servicios-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Servicios</a></li>
+        <li class="sidebar-item"><a href="08-productos-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos</a></li>
+        <li class="sidebar-item"><a href="11-inventario.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>Inventario</a></li>
+        <li class="sidebar-item"><a href="12-reportes-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a></li>
+        <li class="sidebar-item"><a href="14-configuracion.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Configuracion</a></li>
+        <li class="sidebar-item"><a href="15-promociones.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Promociones</a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--spacing-xl);">
+        <a href="../publicas/06-login.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Cerrar sesion</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="flex-between mb-lg">
+        <div>
+          <h1>Inventario</h1>
+          <p class="text-muted">Control de stock y movimientos</p>
+        </div>
+        <div style="display: flex; gap: var(--spacing-sm);">
+          <button class="btn btn-secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17,8 12,3 7,8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Exportar
+          </button>
+          <button class="btn btn-primary" onclick="document.getElementById('modalEntrada').style.display='flex'">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+            Registrar Movimiento
+          </button>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid mb-lg">
+        <div class="stat-card">
+          <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+          <p class="stat-card-value">324</p>
+          <p class="stat-card-label">Unidades totales</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background: var(--color-success-light);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><polyline points="23,6 13.5,15.5 8.5,10.5 1,18"/><polyline points="17,6 23,6 23,12"/></svg></div>
+          <p class="stat-card-value text-success">+45</p>
+          <p class="stat-card-label">Entradas (mes)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background: var(--color-error-light);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-error)" stroke-width="2"><polyline points="23,18 13.5,8.5 8.5,13.5 1,6"/><polyline points="17,18 23,18 23,12"/></svg></div>
+          <p class="stat-card-value text-error">-128</p>
+          <p class="stat-card-label">Salidas (mes)</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background: var(--color-warning-light);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-warning)" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+          <p class="stat-card-value" style="color: var(--color-warning);">5</p>
+          <p class="stat-card-label">Alertas activas</p>
+        </div>
+      </div>
+
+      <!-- Tabs -->
+      <div class="tabs">
+        <div class="tab active">Stock Actual</div>
+        <div class="tab">Movimientos</div>
+        <div class="tab">Alertas</div>
+        <div class="tab">Ajustes</div>
+      </div>
+
+      <!-- Alertas de stock -->
+      <div class="alert alert-warning mb-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        <span><strong>5 productos</strong> tienen stock por debajo del minimo. <a href="#" class="text-gold">Ver alertas</a></span>
+      </div>
+
+      <!-- Filtros -->
+      <div class="card mb-lg">
+        <div class="flex-between" style="flex-wrap: wrap; gap: var(--spacing-md);">
+          <div class="form-group mb-0" style="flex: 1; min-width: 200px;">
+            <input type="text" class="form-input" placeholder="Buscar producto...">
+          </div>
+          <div class="form-group mb-0" style="min-width: 150px;">
+            <select class="form-select">
+              <option value="">Todas las categorias</option>
+              <option value="pomadas">Pomadas y Ceras</option>
+              <option value="aceites">Aceites</option>
+              <option value="shampoo">Shampoo</option>
+            </select>
+          </div>
+          <div class="form-group mb-0" style="min-width: 150px;">
+            <select class="form-select">
+              <option value="">Todos los estados</option>
+              <option value="normal">Stock normal</option>
+              <option value="bajo">Stock bajo</option>
+              <option value="critico">Stock critico</option>
+              <option value="agotado">Agotado</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabla de inventario -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>SKU</th>
+              <th>Stock Actual</th>
+              <th>Stock Minimo</th>
+              <th>Ult. Movimiento</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div style="width: 40px; height: 40px; background: var(--color-gray-light); border-radius: var(--border-radius-sm);"></div>
+                  <span style="font-weight: 500;">Pomada Fijadora Premium</span>
+                </div>
+              </td>
+              <td>POM-001</td>
+              <td style="font-weight: 600;">15</td>
+              <td>10</td>
+              <td>18 Nov 2024</td>
+              <td><span class="badge badge-success">Normal</span></td>
+              <td>
+                <button class="btn btn-text btn-sm">+ Entrada</button>
+                <button class="btn btn-text btn-sm">- Salida</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div style="width: 40px; height: 40px; background: var(--color-gray-light); border-radius: var(--border-radius-sm);"></div>
+                  <span style="font-weight: 500;">Aceite para Barba</span>
+                </div>
+              </td>
+              <td>ACE-002</td>
+              <td style="font-weight: 600; color: var(--color-warning);">5</td>
+              <td>8</td>
+              <td>15 Nov 2024</td>
+              <td><span class="badge badge-warning">Bajo</span></td>
+              <td>
+                <button class="btn btn-text btn-sm">+ Entrada</button>
+                <button class="btn btn-text btn-sm">- Salida</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div style="width: 40px; height: 40px; background: var(--color-gray-light); border-radius: var(--border-radius-sm);"></div>
+                  <span style="font-weight: 500;">Shampoo Anticaspa</span>
+                </div>
+              </td>
+              <td>SHA-003</td>
+              <td style="font-weight: 600; color: var(--color-error);">3</td>
+              <td>10</td>
+              <td>10 Nov 2024</td>
+              <td><span class="badge badge-error">Critico</span></td>
+              <td>
+                <button class="btn btn-text btn-sm">+ Entrada</button>
+                <button class="btn btn-text btn-sm">- Salida</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div style="width: 40px; height: 40px; background: var(--color-gray-light); border-radius: var(--border-radius-sm);"></div>
+                  <span style="font-weight: 500;">Cera Moldeadora</span>
+                </div>
+              </td>
+              <td>CER-004</td>
+              <td style="font-weight: 600; color: var(--color-error);">0</td>
+              <td>8</td>
+              <td>05 Nov 2024</td>
+              <td><span class="badge badge-error">Agotado</span></td>
+              <td>
+                <button class="btn btn-primary btn-sm">+ Entrada</button>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div style="width: 40px; height: 40px; background: var(--color-gray-light); border-radius: var(--border-radius-sm);"></div>
+                  <span style="font-weight: 500;">Peine Profesional</span>
+                </div>
+              </td>
+              <td>ACC-005</td>
+              <td style="font-weight: 600;">30</td>
+              <td>5</td>
+              <td>19 Nov 2024</td>
+              <td><span class="badge badge-success">Normal</span></td>
+              <td>
+                <button class="btn btn-text btn-sm">+ Entrada</button>
+                <button class="btn btn-text btn-sm">- Salida</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Historial de movimientos -->
+      <div class="card mt-lg">
+        <div class="flex-between mb-md">
+          <h3>Ultimos Movimientos</h3>
+          <a href="#" class="btn btn-text btn-sm">Ver historial completo</a>
+        </div>
+        <ul class="list">
+          <li class="list-item">
+            <div class="stat-card-icon" style="width: 40px; height: 40px; background: var(--color-success-light);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            <div style="flex: 1;">
+              <p class="mb-0" style="font-weight: 500;">Entrada de inventario</p>
+              <p class="text-small mb-0">Pomada Fijadora Premium (+20 unidades)</p>
+            </div>
+            <div class="text-right">
+              <p class="text-small mb-0">Hoy, 10:30 AM</p>
+              <p class="text-small mb-0 text-muted">Admin</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class="stat-card-icon" style="width: 40px; height: 40px; background: var(--color-error-light);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-error)" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/></svg></div>
+            <div style="flex: 1;">
+              <p class="mb-0" style="font-weight: 500;">Salida por venta</p>
+              <p class="text-small mb-0">Aceite para Barba (-2 unidades)</p>
+            </div>
+            <div class="text-right">
+              <p class="text-small mb-0">Hoy, 09:15 AM</p>
+              <p class="text-small mb-0 text-muted">Venta #1234</p>
+            </div>
+          </li>
+          <li class="list-item">
+            <div class="stat-card-icon" style="width: 40px; height: 40px; background: var(--color-info-light);"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-info)" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
+            <div style="flex: 1;">
+              <p class="mb-0" style="font-weight: 500;">Ajuste de inventario</p>
+              <p class="text-small mb-0">Peine Profesional (ajuste +5 unidades)</p>
+            </div>
+            <div class="text-right">
+              <p class="text-small mb-0">Ayer, 06:00 PM</p>
+              <p class="text-small mb-0 text-muted">Conteo fisico</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+  </div>
+
+  <!-- Modal Entrada -->
+  <div id="modalEntrada" class="modal-overlay" style="display: none;">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>Registrar Movimiento</h3>
+        <button class="modal-close" onclick="document.getElementById('modalEntrada').style.display='none'">&times;</button>
+      </div>
+      <form>
+        <div class="form-group">
+          <label class="form-label">Tipo de movimiento</label>
+          <select class="form-select">
+            <option value="entrada">Entrada (compra/reabastecimiento)</option>
+            <option value="salida">Salida (uso interno)</option>
+            <option value="ajuste">Ajuste de inventario</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Producto</label>
+          <select class="form-select">
+            <option value="">Seleccionar producto</option>
+            <option value="1">Pomada Fijadora Premium</option>
+            <option value="2">Aceite para Barba</option>
+            <option value="3">Shampoo Anticaspa</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Cantidad</label>
+          <input type="number" class="form-input" placeholder="0" min="1">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Notas (opcional)</label>
+          <textarea class="form-input" rows="2" placeholder="Razon del movimiento..."></textarea>
+        </div>
+        <div style="display: flex; gap: var(--spacing-md); justify-content: flex-end;">
+          <button type="button" class="btn btn-secondary" onclick="document.getElementById('modalEntrada').style.display='none'">Cancelar</button>
+          <button type="submit" class="btn btn-primary">Registrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a href="02-empleados-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Empleados</a>
+    <a href="11-inventario.html" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>Inventario</a>
+    <a href="12-reportes-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a>
+    <a href="14-configuracion.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Config</a>
+  </nav>
+</body>
+</html>

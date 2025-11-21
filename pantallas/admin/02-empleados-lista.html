@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Empleados - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <p class="text-small" style="color: var(--color-primary-gold); margin-bottom: var(--spacing-lg);">Panel Administrador</p>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-empleados-lista.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>Empleados</a></li>
+        <li class="sidebar-item"><a href="05-servicios-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Servicios</a></li>
+        <li class="sidebar-item"><a href="08-productos-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos</a></li>
+        <li class="sidebar-item"><a href="11-inventario.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>Inventario</a></li>
+        <li class="sidebar-item"><a href="12-reportes-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a></li>
+        <li class="sidebar-item"><a href="14-configuracion.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Configuracion</a></li>
+        <li class="sidebar-item"><a href="15-promociones.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Promociones</a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--spacing-xl);">
+        <a href="../publicas/06-login.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Cerrar sesion</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="flex-between mb-lg">
+        <div>
+          <h1>Empleados</h1>
+          <p class="text-muted">Gestiona tu equipo de trabajo</p>
+        </div>
+        <a href="03-crear-empleado.html" class="btn btn-primary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+          Nuevo Empleado
+        </a>
+      </div>
+
+      <!-- Filtros -->
+      <div class="card mb-lg">
+        <div class="flex-between" style="flex-wrap: wrap; gap: var(--spacing-md);">
+          <div class="form-group mb-0" style="flex: 1; min-width: 200px;">
+            <input type="text" class="form-input" placeholder="Buscar por nombre...">
+          </div>
+          <div class="form-group mb-0" style="min-width: 150px;">
+            <select class="form-select">
+              <option value="">Todos los roles</option>
+              <option value="barbero">Barbero</option>
+              <option value="recepcionista">Recepcionista</option>
+              <option value="administrador">Administrador</option>
+            </select>
+          </div>
+          <div class="form-group mb-0" style="min-width: 150px;">
+            <select class="form-select">
+              <option value="">Todos los estados</option>
+              <option value="activo">Activo</option>
+              <option value="inactivo">Inactivo</option>
+              <option value="vacaciones">Vacaciones</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid mb-lg">
+        <div class="stat-card">
+          <p class="stat-card-value">8</p>
+          <p class="stat-card-label">Total empleados</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card-value text-success">6</p>
+          <p class="stat-card-label">Activos</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card-value" style="color: var(--color-warning);">1</p>
+          <p class="stat-card-label">En vacaciones</p>
+        </div>
+        <div class="stat-card">
+          <p class="stat-card-value text-error">1</p>
+          <p class="stat-card-label">Inactivos</p>
+        </div>
+      </div>
+
+      <!-- Tabla de empleados -->
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Empleado</th>
+              <th>Rol</th>
+              <th>Especialidad</th>
+              <th>Horario</th>
+              <th>Estado</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div class="avatar">CM</div>
+                  <div>
+                    <p class="mb-0" style="font-weight: 600;">Carlos Martinez</p>
+                    <p class="text-small mb-0">carlos@stylobarber.com</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge badge-gold">Barbero</span></td>
+              <td>Cortes clasicos, Barba</td>
+              <td>9:00 - 18:00</td>
+              <td><span class="badge badge-success">Activo</span></td>
+              <td>
+                <div style="display: flex; gap: var(--spacing-xs);">
+                  <a href="04-editar-empleado.html" class="btn btn-text btn-sm">Editar</a>
+                  <button class="btn btn-text btn-sm text-error">Desactivar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div class="avatar">JR</div>
+                  <div>
+                    <p class="mb-0" style="font-weight: 600;">Juan Rodriguez</p>
+                    <p class="text-small mb-0">juan@stylobarber.com</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge badge-gold">Barbero</span></td>
+              <td>Fade, Disenos</td>
+              <td>10:00 - 19:00</td>
+              <td><span class="badge badge-success">Activo</span></td>
+              <td>
+                <div style="display: flex; gap: var(--spacing-xs);">
+                  <a href="04-editar-empleado.html" class="btn btn-text btn-sm">Editar</a>
+                  <button class="btn btn-text btn-sm text-error">Desactivar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div class="avatar">ML</div>
+                  <div>
+                    <p class="mb-0" style="font-weight: 600;">Miguel Lopez</p>
+                    <p class="text-small mb-0">miguel@stylobarber.com</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge badge-gold">Barbero</span></td>
+              <td>Coloracion, Tratamientos</td>
+              <td>9:00 - 18:00</td>
+              <td><span class="badge badge-warning">Vacaciones</span></td>
+              <td>
+                <div style="display: flex; gap: var(--spacing-xs);">
+                  <a href="04-editar-empleado.html" class="btn btn-text btn-sm">Editar</a>
+                  <button class="btn btn-text btn-sm text-error">Desactivar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div class="avatar">AG</div>
+                  <div>
+                    <p class="mb-0" style="font-weight: 600;">Ana Garcia</p>
+                    <p class="text-small mb-0">ana@stylobarber.com</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge badge-info">Recepcionista</span></td>
+              <td>-</td>
+              <td>8:00 - 17:00</td>
+              <td><span class="badge badge-success">Activo</span></td>
+              <td>
+                <div style="display: flex; gap: var(--spacing-xs);">
+                  <a href="04-editar-empleado.html" class="btn btn-text btn-sm">Editar</a>
+                  <button class="btn btn-text btn-sm text-error">Desactivar</button>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div style="display: flex; align-items: center; gap: var(--spacing-sm);">
+                  <div class="avatar">PS</div>
+                  <div>
+                    <p class="mb-0" style="font-weight: 600;">Pedro Sanchez</p>
+                    <p class="text-small mb-0">pedro@stylobarber.com</p>
+                  </div>
+                </div>
+              </td>
+              <td><span class="badge badge-gold">Barbero</span></td>
+              <td>Cortes modernos</td>
+              <td>12:00 - 21:00</td>
+              <td><span class="badge badge-error">Inactivo</span></td>
+              <td>
+                <div style="display: flex; gap: var(--spacing-xs);">
+                  <a href="04-editar-empleado.html" class="btn btn-text btn-sm">Editar</a>
+                  <button class="btn btn-text btn-sm text-success">Activar</button>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a href="02-empleados-lista.html" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Empleados</a>
+    <a href="05-servicios-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Servicios</a>
+    <a href="12-reportes-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a>
+    <a href="14-configuracion.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Config</a>
+  </nav>
+</body>
+</html>

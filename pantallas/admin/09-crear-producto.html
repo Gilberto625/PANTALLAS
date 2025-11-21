@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Producto - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <p class="text-small" style="color: var(--color-primary-gold); margin-bottom: var(--spacing-lg);">Panel Administrador</p>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-empleados-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Empleados</a></li>
+        <li class="sidebar-item"><a href="05-servicios-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Servicios</a></li>
+        <li class="sidebar-item"><a href="08-productos-lista.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos</a></li>
+        <li class="sidebar-item"><a href="11-inventario.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 7h-9"/><path d="M14 17H5"/><circle cx="17" cy="17" r="3"/><circle cx="7" cy="7" r="3"/></svg>Inventario</a></li>
+        <li class="sidebar-item"><a href="12-reportes-lista.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a></li>
+        <li class="sidebar-item"><a href="14-configuracion.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Configuracion</a></li>
+        <li class="sidebar-item"><a href="15-promociones.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>Promociones</a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--spacing-xl);">
+        <a href="../publicas/06-login.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Cerrar sesion</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="mb-lg">
+        <a href="08-productos-lista.html" class="btn btn-text" style="padding-left: 0;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+          Volver a productos
+        </a>
+        <h1>Crear Nuevo Producto</h1>
+        <p class="text-muted">Agrega un producto al catalogo</p>
+      </div>
+
+      <form>
+        <div class="grid">
+          <div class="card">
+            <h3 class="mb-md">Informacion del Producto</h3>
+
+            <div class="form-group">
+              <label class="form-label">Nombre del producto *</label>
+              <input type="text" class="form-input" placeholder="Ej: Pomada Fijadora Premium">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Descripcion</label>
+              <textarea class="form-input" rows="3" placeholder="Descripcion detallada del producto..."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Categoria *</label>
+              <select class="form-select">
+                <option value="">Seleccionar categoria</option>
+                <option value="pomadas">Pomadas y Ceras</option>
+                <option value="aceites">Aceites</option>
+                <option value="shampoo">Shampoo</option>
+                <option value="acondicionador">Acondicionador</option>
+                <option value="accesorios">Accesorios</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Marca</label>
+              <input type="text" class="form-input" placeholder="Nombre de la marca">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">SKU / Codigo</label>
+              <input type="text" class="form-input" placeholder="ABC-123">
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-md">Precios e Inventario</h3>
+
+            <div class="grid" style="grid-template-columns: 1fr 1fr;">
+              <div class="form-group">
+                <label class="form-label">Precio de venta *</label>
+                <input type="number" class="form-input" placeholder="$0.00" min="0">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Precio de costo</label>
+                <input type="number" class="form-input" placeholder="$0.00" min="0">
+              </div>
+            </div>
+
+            <div class="grid" style="grid-template-columns: 1fr 1fr;">
+              <div class="form-group">
+                <label class="form-label">Stock inicial *</label>
+                <input type="number" class="form-input" placeholder="0" min="0">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Stock minimo (alerta)</label>
+                <input type="number" class="form-input" placeholder="5" min="0">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Estado</label>
+              <select class="form-select">
+                <option value="activo">Activo (disponible para venta)</option>
+                <option value="inactivo">Inactivo (oculto)</option>
+              </select>
+            </div>
+
+            <h3 class="mb-md mt-lg">Imagen del Producto</h3>
+
+            <div style="border: 2px dashed var(--color-gray-medium); border-radius: var(--border-radius-lg); padding: var(--spacing-xl); text-align: center;">
+              <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="var(--color-gray-medium)" stroke-width="2" style="margin-bottom: var(--spacing-md);"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+              <p class="mb-sm">Arrastra una imagen o</p>
+              <button type="button" class="btn btn-secondary btn-sm">Seleccionar archivo</button>
+              <p class="text-small mt-sm mb-0">JPG, PNG. Max 2MB</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex-between mt-lg">
+          <a href="08-productos-lista.html" class="btn btn-secondary">Cancelar</a>
+          <button type="submit" class="btn btn-primary">Crear Producto</button>
+        </div>
+      </form>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a>
+    <a href="02-empleados-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Empleados</a>
+    <a href="08-productos-lista.html" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Productos</a>
+    <a href="12-reportes-lista.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"/><path d="M22 12A10 10 0 0 0 12 2v10z"/></svg>Reportes</a>
+    <a href="14-configuracion.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/></svg>Config</a>
+  </nav>
+</body>
+</html>

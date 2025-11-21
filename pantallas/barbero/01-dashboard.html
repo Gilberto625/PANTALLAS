@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Barbero - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="#" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-agenda-personal.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Mi Agenda</a></li>
+        <li class="sidebar-item"><a href="03-tiempos-servicio.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>Tiempos de Servicio</a></li>
+        <li class="sidebar-item"><a href="04-notificaciones.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>Notificaciones</a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--spacing-xl);">
+        <a href="../publicas/06-login.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Cerrar sesion</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="flex-between mb-lg">
+        <div>
+          <h1>Hola, Carlos!</h1>
+          <p class="text-muted">Jueves 21 de Noviembre, 2025</p>
+        </div>
+        <div class="avatar avatar-lg">CM</div>
+      </div>
+
+      <!-- Citas del dia -->
+      <div class="card mb-lg" style="background: linear-gradient(135deg, var(--color-primary-dark), #3d3d3d); color: white;">
+        <div class="flex-between">
+          <div>
+            <p class="text-small" style="color: rgba(255,255,255,0.7);">Citas de hoy</p>
+            <h2 style="color: white; margin: var(--spacing-sm) 0;">8 citas programadas</h2>
+            <p style="color: var(--color-primary-gold);">Proxima: 10:30 AM - Juan Perez</p>
+            <p class="text-small" style="color: rgba(255,255,255,0.7);">Corte + Barba</p>
+          </div>
+          <div class="text-right">
+            <span class="badge badge-gold">En curso</span>
+            <div class="mt-md">
+              <a href="02-agenda-personal.html" class="btn btn-secondary btn-sm" style="color: white; border-color: white;">Ver agenda</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-grid mb-lg">
+        <div class="stat-card">
+          <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg></div>
+          <p class="stat-card-value">8</p>
+          <p class="stat-card-label">Citas hoy</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22,12 18,12 15,21 9,3 6,12 2,12"/></svg></div>
+          <p class="stat-card-value">5</p>
+          <p class="stat-card-label">Completadas</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+          <p class="stat-card-value">3</p>
+          <p class="stat-card-label">Pendientes</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card-icon" style="background: var(--color-success-light);"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-success)" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+          <p class="stat-card-value">$2,450</p>
+          <p class="stat-card-label">Ingresos hoy</p>
+        </div>
+      </div>
+
+      <!-- Citas en tiempo real -->
+      <h3 class="mb-md">Citas en tiempo real</h3>
+      <div class="card mb-lg">
+        <div class="list">
+          <div class="list-item">
+            <div class="avatar">JP</div>
+            <div class="list-item-content">
+              <p class="list-item-title">Juan Perez</p>
+              <p class="list-item-subtitle">Corte + Barba - 10:30 AM</p>
+            </div>
+            <span class="badge badge-gold">En espera</span>
+          </div>
+          <div class="list-item">
+            <div class="avatar">MG</div>
+            <div class="list-item-content">
+              <p class="list-item-title">Miguel Garcia</p>
+              <p class="list-item-subtitle">Corte clasico - 11:00 AM</p>
+            </div>
+            <span class="badge badge-outline">Confirmada</span>
+          </div>
+          <div class="list-item">
+            <div class="avatar">RL</div>
+            <div class="list-item-content">
+              <p class="list-item-title">Roberto Lopez</p>
+              <p class="list-item-subtitle">Corte + Diseno - 11:30 AM</p>
+            </div>
+            <span class="badge badge-outline">Confirmada</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen servicios -->
+      <h3 class="mb-md">Resumen de servicios realizados</h3>
+      <div class="grid">
+        <div class="card">
+          <h4 class="mb-sm">Servicios de hoy</h4>
+          <div class="list">
+            <div class="list-item">
+              <div class="list-item-content">
+                <p class="list-item-title">Corte clasico</p>
+              </div>
+              <span class="text-muted">3</span>
+            </div>
+            <div class="list-item">
+              <div class="list-item-content">
+                <p class="list-item-title">Corte + Barba</p>
+              </div>
+              <span class="text-muted">2</span>
+            </div>
+            <div class="list-item">
+              <div class="list-item-content">
+                <p class="list-item-title">Afeitado clasico</p>
+              </div>
+              <span class="text-muted">1</span>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h4 class="mb-sm">Acciones rapidas</h4>
+          <a href="02-agenda-personal.html" class="btn btn-primary btn-block mb-sm">Ver agenda completa</a>
+          <a href="03-tiempos-servicio.html" class="btn btn-secondary btn-block mb-sm">Ajustar tiempos</a>
+          <a href="04-notificaciones.html" class="btn btn-text btn-block">Ver notificaciones</a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="#" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</a>
+    <a href="02-agenda-personal.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>Agenda</a>
+    <a href="03-tiempos-servicio.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>Tiempos</a>
+    <a href="04-notificaciones.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>Alertas</a>
+  </nav>
+</body>
+</html>

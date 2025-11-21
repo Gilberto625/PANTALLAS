@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Editar Perfil - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-perfil.html" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Mi Perfil</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <a href="02-perfil.html" class="btn btn-text mb-md">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Volver a mi perfil
+      </a>
+
+      <h1 class="mb-lg">Editar Perfil</h1>
+
+      <div class="card">
+        <div class="flex" style="gap: var(--spacing-lg); align-items: center; margin-bottom: var(--spacing-xl);">
+          <div class="avatar avatar-xl">JP</div>
+          <div>
+            <button class="btn btn-secondary btn-sm mb-sm">Cambiar foto</button>
+            <p class="text-caption">JPG, PNG. Max 2MB</p>
+          </div>
+        </div>
+
+        <form>
+          <div class="grid">
+            <div class="form-group">
+              <label class="form-label">Nombre(s)</label>
+              <input type="text" class="form-input" value="Juan">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Apellidos</label>
+              <input type="text" class="form-input" value="Perez Lopez">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Correo electronico</label>
+            <input type="email" class="form-input" value="juan.perez@email.com">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Telefono</label>
+            <input type="tel" class="form-input" value="55 1234 5678">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Fecha de nacimiento</label>
+            <input type="date" class="form-input" value="1990-03-15">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Direccion (opcional)</label>
+            <input type="text" class="form-input" placeholder="Calle, numero, colonia">
+          </div>
+
+          <hr style="border: none; border-top: 1px solid var(--color-gray-light); margin: var(--spacing-lg) 0;">
+
+          <h3 class="mb-md">Cambiar contrasena</h3>
+
+          <div class="form-group">
+            <label class="form-label">Contrasena actual</label>
+            <input type="password" class="form-input" placeholder="Ingresa tu contrasena actual">
+          </div>
+
+          <div class="grid">
+            <div class="form-group">
+              <label class="form-label">Nueva contrasena</label>
+              <input type="password" class="form-input" placeholder="Nueva contrasena">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Confirmar contrasena</label>
+              <input type="password" class="form-input" placeholder="Confirmar">
+            </div>
+          </div>
+
+          <div class="flex flex-gap mt-lg">
+            <button type="submit" class="btn btn-primary">Guardar cambios</button>
+            <a href="02-perfil.html" class="btn btn-text">Cancelar</a>
+          </div>
+        </form>
+      </div>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</a>
+    <a href="04-agendar-servicio.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg>Agendar</a>
+    <a href="08-mis-citas.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Citas</a>
+    <a href="11-carrito.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Tienda</a>
+    <a href="02-perfil.html" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
+  </nav>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mis Tickets - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    .tickets-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--spacing-lg); flex-wrap: wrap; gap: var(--spacing-md); }
+    .ticket-filters { display: flex; gap: var(--spacing-sm); }
+    .ticket-filter { padding: 8px 16px; border: 1px solid var(--color-gray-light); border-radius: 20px;
+      background: white; cursor: pointer; font-size: 14px; transition: all 0.3s ease; }
+    .ticket-filter.active, .ticket-filter:hover { background: var(--color-primary-gold); color: white; border-color: var(--color-primary-gold); }
+    .ticket-card { display: flex; justify-content: space-between; align-items: flex-start; padding: var(--spacing-lg);
+      border-bottom: 1px solid var(--color-gray-light); gap: var(--spacing-md); }
+    .ticket-card:last-child { border-bottom: none; }
+    .ticket-card:hover { background: var(--color-gray-light); }
+    .ticket-id { font-size: 12px; color: var(--color-gray-medium); margin-bottom: 4px; }
+    .ticket-title { font-weight: 600; margin-bottom: 4px; }
+    .ticket-meta { font-size: 13px; color: var(--color-gray-dark); }
+    .ticket-status { padding: 4px 12px; border-radius: 12px; font-size: 12px; font-weight: 600; white-space: nowrap; }
+    .status-open { background: #E3F2FD; color: #1976D2; }
+    .status-progress { background: #FFF3E0; color: #F57C00; }
+    .status-resolved { background: #E8F5E9; color: #388E3C; }
+    .status-closed { background: var(--color-gray-light); color: var(--color-gray-dark); }
+    .empty-state { text-align: center; padding: var(--spacing-2xl); }
+    .empty-state svg { color: var(--color-gray-medium); margin-bottom: var(--spacing-md); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../publicas/01-inicio.html" class="navbar-logo">Stylo <span>Barber</span></a>
+    <ul class="navbar-links">
+      <li><a href="../cliente/01-dashboard.html" class="navbar-link">Mi Cuenta</a></li>
+      <li><a href="#" class="navbar-link active">Soporte</a></li>
+      <li><a href="01-faq.html" class="navbar-link">FAQ</a></li>
+      <li><a href="#" class="btn btn-text btn-sm">Juan P.</a></li>
+    </ul>
+  </nav>
+
+  <section class="section">
+    <div class="container">
+      <div class="tickets-header">
+        <div>
+          <h1>Mis Tickets de Soporte</h1>
+          <p class="text-small">Gestiona tus solicitudes de ayuda</p>
+        </div>
+        <a href="04-nuevo-ticket.html" class="btn btn-primary">+ Nuevo Ticket</a>
+      </div>
+
+      <div class="ticket-filters" style="margin-bottom: var(--spacing-lg);">
+        <button class="ticket-filter active">Todos (5)</button>
+        <button class="ticket-filter">Abiertos (2)</button>
+        <button class="ticket-filter">En Progreso (1)</button>
+        <button class="ticket-filter">Resueltos (2)</button>
+      </div>
+
+      <div class="card" style="padding: 0; overflow: hidden;">
+        <div class="ticket-card">
+          <div style="flex: 1;">
+            <p class="ticket-id">#TK-2024-0892</p>
+            <p class="ticket-title">Problema con el cargo de mi tarjeta</p>
+            <p class="ticket-meta">Categoria: Pagos - Creado: 18 Nov 2024</p>
+          </div>
+          <span class="ticket-status status-progress">En Progreso</span>
+        </div>
+        <div class="ticket-card">
+          <div style="flex: 1;">
+            <p class="ticket-id">#TK-2024-0856</p>
+            <p class="ticket-title">No puedo reprogramar mi cita</p>
+            <p class="ticket-meta">Categoria: Citas - Creado: 15 Nov 2024</p>
+          </div>
+          <span class="ticket-status status-open">Abierto</span>
+        </div>
+        <div class="ticket-card">
+          <div style="flex: 1;">
+            <p class="ticket-id">#TK-2024-0834</p>
+            <p class="ticket-title">Solicitud de factura</p>
+            <p class="ticket-meta">Categoria: Facturacion - Creado: 12 Nov 2024</p>
+          </div>
+          <span class="ticket-status status-resolved">Resuelto</span>
+        </div>
+        <div class="ticket-card">
+          <div style="flex: 1;">
+            <p class="ticket-id">#TK-2024-0801</p>
+            <p class="ticket-title">Producto no recibido</p>
+            <p class="ticket-meta">Categoria: Pedidos - Creado: 8 Nov 2024</p>
+          </div>
+          <span class="ticket-status status-resolved">Resuelto</span>
+        </div>
+        <div class="ticket-card">
+          <div style="flex: 1;">
+            <p class="ticket-id">#TK-2024-0789</p>
+            <p class="ticket-title">Cambio de correo electronico</p>
+            <p class="ticket-meta">Categoria: Cuenta - Creado: 5 Nov 2024</p>
+          </div>
+          <span class="ticket-status status-closed">Cerrado</span>
+        </div>
+      </div>
+
+      <div class="card" style="background: var(--color-gray-light); margin-top: var(--spacing-xl);">
+        <div style="display: flex; align-items: center; gap: var(--spacing-lg); flex-wrap: wrap;">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary-gold)" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          <div style="flex: 1;">
+            <h4>Necesitas ayuda inmediata?</h4>
+            <p class="text-small">Nuestro chat en vivo esta disponible de 9:00 AM a 8:00 PM</p>
+          </div>
+          <a href="05-chat.html" class="btn btn-primary">Iniciar Chat</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: var(--color-primary-dark); color: rgba(255,255,255,0.7); padding: var(--spacing-xl) 0;">
+    <div class="container text-center">
+      <p class="navbar-logo" style="margin-bottom: var(--spacing-md);">Stylo <span>Barber</span></p>
+      <p class="text-small" style="color: rgba(255,255,255,0.5);">2024 Stylo Barber Connect. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>

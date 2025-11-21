@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agendar Cita - Resumen - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="#" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg>Agendar Cita</a></li>
+      </ul>
+    </aside>
+
+    <main class="main-content">
+      <h1 class="mb-md">Agendar Cita</h1>
+
+      <div class="progress-steps mb-xl">
+        <div class="progress-step completed">
+          <div class="progress-step-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+          <span class="progress-step-label">Servicio</span>
+        </div>
+        <div class="progress-step completed">
+          <div class="progress-step-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+          <span class="progress-step-label">Barbero</span>
+        </div>
+        <div class="progress-step completed">
+          <div class="progress-step-circle"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20,6 9,17 4,12"/></svg></div>
+          <span class="progress-step-label">Fecha/Hora</span>
+        </div>
+        <div class="progress-step active">
+          <div class="progress-step-circle">4</div>
+          <span class="progress-step-label">Confirmar</span>
+        </div>
+      </div>
+
+      <div class="grid" style="grid-template-columns: 2fr 1fr;">
+        <div>
+          <div class="card mb-lg">
+            <h2 class="mb-lg">Resumen de tu cita</h2>
+
+            <div class="list">
+              <div class="list-item" style="padding-left: 0;">
+                <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="3"/><path d="M6 9v12"/><path d="M13 6l-3 9 7 4"/></svg></div>
+                <div style="flex: 1;">
+                  <p class="text-caption">Servicio</p>
+                  <p style="font-weight: 600;">Corte Clasico</p>
+                </div>
+                <a href="04-agendar-servicio.html" class="btn btn-text btn-sm">Cambiar</a>
+              </div>
+              <div class="list-item" style="padding-left: 0;">
+                <div class="avatar">CM</div>
+                <div style="flex: 1;">
+                  <p class="text-caption">Barbero</p>
+                  <p style="font-weight: 600;">Carlos Martinez</p>
+                </div>
+                <a href="05-agendar-barbero.html" class="btn btn-text btn-sm">Cambiar</a>
+              </div>
+              <div class="list-item" style="padding-left: 0;">
+                <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg></div>
+                <div style="flex: 1;">
+                  <p class="text-caption">Fecha y hora</p>
+                  <p style="font-weight: 600;">Miercoles 20 Nov, 10:00 AM</p>
+                </div>
+                <a href="06-agendar-calendario.html" class="btn btn-text btn-sm">Cambiar</a>
+              </div>
+              <div class="list-item" style="padding-left: 0;">
+                <div class="stat-card-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+                <div style="flex: 1;">
+                  <p class="text-caption">Duracion estimada</p>
+                  <p style="font-weight: 600;">30 minutos</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <h3 class="mb-md">Metodo de pago</h3>
+            <div class="alert alert-warning mb-md">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              <span>Se requiere anticipo del 30% para confirmar la cita</span>
+            </div>
+
+            <div class="form-group">
+              <label class="card" style="display: flex; gap: var(--spacing-md); cursor: pointer; border: 2px solid var(--color-primary-gold);">
+                <input type="radio" name="payment" checked>
+                <div>
+                  <p style="font-weight: 600;">Tarjeta de credito/debito</p>
+                  <p class="text-caption">Visa, Mastercard, AMEX</p>
+                </div>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="card" style="display: flex; gap: var(--spacing-md); cursor: pointer;">
+                <input type="radio" name="payment">
+                <div>
+                  <p style="font-weight: 600;">Transferencia bancaria</p>
+                  <p class="text-caption">SPEI - Requiere validacion</p>
+                </div>
+              </label>
+            </div>
+            <div class="form-group">
+              <label class="card" style="display: flex; gap: var(--spacing-md); cursor: pointer;">
+                <input type="radio" name="payment">
+                <div>
+                  <p style="font-weight: 600;">Mercado Pago</p>
+                  <p class="text-caption">Paga con tu cuenta MP</p>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card" style="position: sticky; top: var(--spacing-lg);">
+            <h3 class="mb-md">Detalle de pago</h3>
+
+            <div class="flex-between mb-sm">
+              <span>Corte Clasico</span>
+              <span>$150.00</span>
+            </div>
+            <div class="flex-between mb-sm text-muted">
+              <span>Descuento 10%</span>
+              <span class="text-success">-$15.00</span>
+            </div>
+
+            <hr style="border: none; border-top: 1px solid var(--color-gray-light); margin: var(--spacing-md) 0;">
+
+            <div class="flex-between mb-sm">
+              <span style="font-weight: 600;">Subtotal</span>
+              <span style="font-weight: 600;">$135.00</span>
+            </div>
+            <div class="flex-between mb-md text-gold">
+              <span style="font-weight: 600;">Anticipo (30%)</span>
+              <span style="font-weight: 600;">$40.50</span>
+            </div>
+            <p class="text-caption mb-lg">Restante a pagar en sucursal: $94.50</p>
+
+            <button class="btn btn-primary btn-block mb-sm">Confirmar y Pagar $40.50</button>
+            <a href="06-agendar-calendario.html" class="btn btn-text btn-block">Atras</a>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</a>
+    <a href="#" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/></svg>Agendar</a>
+    <a href="08-mis-citas.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>Citas</a>
+    <a href="11-carrito.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/></svg>Tienda</a>
+    <a href="02-perfil.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>Perfil</a>
+  </nav>
+</body>
+</html>

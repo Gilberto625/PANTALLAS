@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tiempos de Servicio - Stylo Barber Connect</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <div class="layout-sidebar">
+    <aside class="sidebar">
+      <a href="#" class="sidebar-logo">Stylo <span>Barber</span></a>
+      <ul class="sidebar-menu">
+        <li class="sidebar-item"><a href="01-dashboard.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>Dashboard</a></li>
+        <li class="sidebar-item"><a href="02-agenda-personal.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Mi Agenda</a></li>
+        <li class="sidebar-item"><a href="#" class="sidebar-link active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>Tiempos de Servicio</a></li>
+        <li class="sidebar-item"><a href="04-notificaciones.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>Notificaciones</a></li>
+      </ul>
+      <div style="margin-top: auto; padding-top: var(--spacing-xl);">
+        <a href="../publicas/06-login.html" class="sidebar-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16,17 21,12 16,7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>Cerrar sesion</a>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <div class="flex-between mb-lg">
+        <div>
+          <h1>Tiempos de Servicio</h1>
+          <p class="text-muted">Configura la duracion de tus servicios</p>
+        </div>
+        <div class="avatar avatar-lg">CM</div>
+      </div>
+
+      <div class="alert alert-info mb-lg">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        <div>
+          <strong>Personaliza tus tiempos</strong>
+          <p class="text-caption mb-0">Ajusta la duracion segun tu ritmo de trabajo. Esto afectara la disponibilidad en el calendario.</p>
+        </div>
+      </div>
+
+      <!-- Servicios de corte -->
+      <div class="card mb-lg">
+        <h3 class="mb-md">Servicios de Corte</h3>
+
+        <div class="form-group">
+          <label class="form-label">Corte clasico</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>20 minutos</option>
+              <option>25 minutos</option>
+              <option selected>30 minutos</option>
+              <option>35 minutos</option>
+              <option>40 minutos</option>
+            </select>
+            <span class="text-muted">$150</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Corte degradado</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>30 minutos</option>
+              <option selected>35 minutos</option>
+              <option>40 minutos</option>
+              <option>45 minutos</option>
+            </select>
+            <span class="text-muted">$180</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Corte + Diseno</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>45 minutos</option>
+              <option>50 minutos</option>
+              <option selected>60 minutos</option>
+              <option>70 minutos</option>
+            </select>
+            <span class="text-muted">$250</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Servicios de barba -->
+      <div class="card mb-lg">
+        <h3 class="mb-md">Servicios de Barba</h3>
+
+        <div class="form-group">
+          <label class="form-label">Recorte de barba</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>15 minutos</option>
+              <option selected>20 minutos</option>
+              <option>25 minutos</option>
+            </select>
+            <span class="text-muted">$100</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Afeitado clasico</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>20 minutos</option>
+              <option selected>25 minutos</option>
+              <option>30 minutos</option>
+            </select>
+            <span class="text-muted">$120</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Barba completa + Toalla caliente</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>30 minutos</option>
+              <option selected>35 minutos</option>
+              <option>40 minutos</option>
+            </select>
+            <span class="text-muted">$180</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Combos -->
+      <div class="card mb-lg">
+        <h3 class="mb-md">Combos</h3>
+
+        <div class="form-group">
+          <label class="form-label">Corte + Barba</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>40 minutos</option>
+              <option selected>45 minutos</option>
+              <option>50 minutos</option>
+              <option>55 minutos</option>
+            </select>
+            <span class="text-muted">$220</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Corte + Barba + Mascarilla</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>60 minutos</option>
+              <option>70 minutos</option>
+              <option selected>75 minutos</option>
+              <option>80 minutos</option>
+            </select>
+            <span class="text-muted">$320</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Tratamiento VIP completo</label>
+          <div class="flex-between" style="gap: var(--spacing-md);">
+            <select class="form-input" style="flex: 1;">
+              <option>80 minutos</option>
+              <option selected>90 minutos</option>
+              <option>100 minutos</option>
+              <option>120 minutos</option>
+            </select>
+            <span class="text-muted">$450</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Botones de accion -->
+      <div class="flex-between">
+        <button class="btn btn-secondary">Restaurar valores</button>
+        <button class="btn btn-primary">Guardar cambios</button>
+      </div>
+    </main>
+  </div>
+
+  <nav class="navbar-mobile">
+    <a href="01-dashboard.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>Inicio</a>
+    <a href="02-agenda-personal.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/></svg>Agenda</a>
+    <a href="#" class="navbar-mobile-item active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>Tiempos</a>
+    <a href="04-notificaciones.html" class="navbar-mobile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/></svg>Alertas</a>
+  </nav>
+</body>
+</html>
